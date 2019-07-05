@@ -51,7 +51,7 @@ bool step_init_ll(void);
 * complete_callback		:move done callback
 * wait 								:default is wait
 */
-bool set_steps(long steps, long timer_min_val, void(*complete_callback)(void), bool wait=true);
+bool set_steps(long steps, long timer_min_val, void(*complete_callback)(void), bool wait);
 
 
 
@@ -62,7 +62,7 @@ bool set_steps(long steps, long timer_min_val, void(*complete_callback)(void), b
 * wait								:default is no wait
 */
 
-bool set_speed(int8_t direction, long timer_min_val, void(*complete_callback)(void), bool wait = false);
+bool set_speed(int8_t direction, long timer_min_val, void(*complete_callback)(void), bool wait);
 
 
 #endif
