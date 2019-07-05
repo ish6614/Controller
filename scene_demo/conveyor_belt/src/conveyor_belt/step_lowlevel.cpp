@@ -1,13 +1,13 @@
 #include "step_lowlevel.h"
 
 enum step_state_e {
-	SPEED_UP 				= 0,
+	SPEED_UP,
 	SPEED_CONSTANT,
 	SPEED_DOWN,
 };
 
 enum step_mode_e {
-	POSITION_MODE = 0,
+	POSITION_MODE,
 	SPEED_MODE,
 };
 
@@ -24,7 +24,7 @@ struct step_param_t {
 
 	void(*positon_complete_callback)(void);
 	void(*speed_complete_callback)(void);
-}step_param = {0};
+}step_param = {SPEED_UP};
 
 
 bool step_init_ll(void){
